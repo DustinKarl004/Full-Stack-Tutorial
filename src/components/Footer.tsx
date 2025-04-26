@@ -69,19 +69,19 @@ export default function Footer() {
             <h3 className="footer__title">Technologies</h3>
             <ul className="footer__links">
               <li className="footer__links-item">
-                <Link href="/technologies/frontend" className="footer__links-link">Frontend</Link>
+                <Link href="/tech-stacks?category=frontend" className="footer__links-link">Frontend</Link>
               </li>
               <li className="footer__links-item">
-                <Link href="/technologies/backend" className="footer__links-link">Backend</Link>
+                <Link href="/tech-stacks?category=backend" className="footer__links-link">Backend</Link>
               </li>
               <li className="footer__links-item">
-                <Link href="/technologies/databases" className="footer__links-link">Databases</Link>
+                <Link href="/tech-stacks?category=database" className="footer__links-link">Databases</Link>
               </li>
               <li className="footer__links-item">
-                <Link href="/technologies/devops" className="footer__links-link">DevOps</Link>
+                <Link href="/tech-stacks?category=devops" className="footer__links-link">DevOps</Link>
               </li>
               <li className="footer__links-item">
-                <Link href="/technologies/cloud" className="footer__links-link">Cloud Services</Link>
+                <Link href="/tech-stacks?category=cloud" className="footer__links-link">Cloud Services</Link>
               </li>
             </ul>
           </div>

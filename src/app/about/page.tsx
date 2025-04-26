@@ -35,9 +35,14 @@ export default function AboutPage() {
           </div>
         </AnimateOnScroll>
         
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '3rem' }}>
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+          gap: '2rem', 
+          marginBottom: '3rem' 
+        }}>
           <AnimateOnScroll animation="slide-in" delay={0.1}>
-            <div className="card" style={{ padding: '2rem' }}>
+            <div className="card" style={{ padding: '2rem', height: '100%' }}>
               <h3 style={{ marginBottom: '1rem' }}>What We Offer</h3>
               <ul style={{ paddingLeft: '1.5rem', marginBottom: '0' }}>
                 <li style={{ marginBottom: '0.5rem' }}>Step-by-step comprehensive tutorials</li>
@@ -51,7 +56,7 @@ export default function AboutPage() {
           </AnimateOnScroll>
           
           <AnimateOnScroll animation="slide-in" delay={0.2}>
-            <div className="card" style={{ padding: '2rem' }}>
+            <div className="card" style={{ padding: '2rem', height: '100%' }}>
               <h3 style={{ marginBottom: '1rem' }}>Who It's For</h3>
               <ul style={{ paddingLeft: '1.5rem', marginBottom: '0' }}>
                 <li style={{ marginBottom: '0.5rem' }}>Beginners looking to start a coding journey</li>

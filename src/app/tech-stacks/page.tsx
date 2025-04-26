@@ -1,14 +1,24 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import PageLayout from '@/components/PageLayout'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import TechStackItem from '@/components/TechStackItem'
 import { techStacks, type TechStackType } from '@/data/techStacks'
 
 export default function TechStacksPage() {
+  const searchParams = useSearchParams()
+  const categoryParam = searchParams.get('category')
+  
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
+  
+  useEffect(() => {
+    if (categoryParam) {
+      setSelectedCategory(categoryParam)
+    }
+  }, [categoryParam])
   
   const categories = [
     { id: 'all', label: 'All' },
