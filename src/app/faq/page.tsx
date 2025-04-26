@@ -11,10 +11,9 @@ interface FAQItem {
 }
 
 export default function FAQPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [selectedCategory, setSelectedCategory] = useState('general')
   
   const faqCategories = [
-    { id: 'all', label: 'All Questions' },
     { id: 'general', label: 'General' },
     { id: 'tutorials', label: 'Tutorials' },
     { id: 'account', label: 'Account' },
@@ -89,14 +88,7 @@ export default function FAQPage() {
     }
   ]
   
-  // Reset to showing all FAQs when the component mounts
-  useEffect(() => {
-    setSelectedCategory('all');
-  }, []);
-  
-  const filteredFAQs = selectedCategory === 'all' 
-    ? faqItems
-    : faqItems.filter(item => item.category === selectedCategory);
+  const filteredFAQs = faqItems.filter(item => item.category === selectedCategory);
 
   return (
     <PageLayout>
