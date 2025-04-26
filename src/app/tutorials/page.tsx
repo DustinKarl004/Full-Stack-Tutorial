@@ -12,7 +12,7 @@ export default function TutorialsPage() {
   const [selectedLevel, setSelectedLevel] = useState<string>('all')
   
   // Get unique categories
-  const categories = ['all', ...new Set(tutorials.map(tutorial => tutorial.category))]
+  const categories = ['all', ...Array.from(new Set(tutorials.map(tutorial => tutorial.category)))]
   
   // Filter tutorials based on search and filters
   const filteredTutorials = tutorials.filter(tutorial => {
