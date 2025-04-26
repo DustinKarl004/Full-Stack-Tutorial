@@ -132,7 +132,7 @@ export default function FAQPage() {
         {/* FAQ items */}
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           {filteredFAQs.map((faq, index) => (
-            <AnimateOnScroll key={index} animation="fade-up" delay={index * 100}>
+            <AnimateOnScroll key={index} animation="slide-up" delay={index * 100}>
               <div 
                 style={{ 
                   marginBottom: '1.5rem', 
